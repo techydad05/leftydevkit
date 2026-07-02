@@ -56,6 +56,8 @@ nav .container {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	height: 56px;
+	overflow: visible;
 }
 
 .logo {
@@ -74,11 +76,15 @@ nav .container {
 	width: auto;
 	border-radius: 8px;
 	transition: all 0.3s ease;
+	align-self: flex-start;
+	margin-bottom: -94px;
 }
 
 nav.scrolled .logo-img {
 	height: 48px;
 	border-radius: 6px;
+	margin-bottom: 0;
+	align-self: center;
 }
 
 .logo-text {
@@ -95,9 +101,13 @@ nav.scrolled .logo-img {
 	}
 	.logo-img {
 		height: 100px;
+		margin-bottom: -44px;
+		align-self: flex-start;
 	}
 	nav.scrolled .logo-img {
 		height: 40px;
+		margin-bottom: 0;
+		align-self: center;
 	}
 }
 
