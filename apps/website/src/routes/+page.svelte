@@ -50,7 +50,7 @@
 				A community of people who code for a cause instead of a cap table.
 			</p>
 			<p>
-				The right has the money. We have <code>organize()</code>, <code>while (!free) { fight() }</code>,
+				The right has the money. We have <code>organize()</code>, <code>while (!free) {'{'}fight(){'}'}</code>,
 				and each other.
 			</p>
 			<br/>
