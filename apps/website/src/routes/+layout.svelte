@@ -2,6 +2,17 @@
 	import '../app.css';
 
 	let { children } = $props();
+
+	let scrolled = $state(false);
+
+	$effect(() => {
+		const onScroll = () => {
+			scrolled = window.scrollY > 60;
+		};
+		onScroll();
+		window.addEventListener('scroll', onScroll, { passive: true });
+		return () => window.removeEventListener('scroll', onScroll);
+	});
 </script>
 
 <svelte:head>
@@ -13,7 +24,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<nav>
+<nav class:scrolled>
 	<div class="container">
 		<a href="/" class="logo">
 			<img src="/ldk-logo.png" alt="LeftyDevKit" class="logo-img" />
